@@ -1,0 +1,194 @@
+{
+ "version": "cna-v0.23.14",
+ "build": "a306d3c72b4d2795",
+ "files": {
+  "ai/README.md": {
+   "sha256": "9f3f1d86f7db6009f845029b23a22a34670b65f99eafc51df5501f5b3a45bc0f",
+   "size": 806
+  },
+  "ai/models/all-MiniLM-L6-v2/config.json": {
+   "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7",
+   "size": 650
+  },
+  "ai/models/all-MiniLM-L6-v2/onnx/model_quantized.onnx": {
+   "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+   "size": 22972370
+  },
+  "ai/models/all-MiniLM-L6-v2/special_tokens_map.json": {
+   "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+   "size": 125
+  },
+  "ai/models/all-MiniLM-L6-v2/tokenizer.json": {
+   "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0",
+   "size": 711661
+  },
+  "ai/models/all-MiniLM-L6-v2/tokenizer_config.json": {
+   "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+   "size": 366
+  },
+  "ai/ort-wasm-simd-threaded.mjs": {
+   "sha256": "c57ca56328877353a575e51bbca6f18450027d6c9bf2307a2cb2c41363b4de9f",
+   "size": 24381
+  },
+  "ai/ort-wasm-simd-threaded.wasm": {
+   "sha256": "06ba057753da3847e4c24f02d91ab133455b0817c69a44993a9a53a2146df9e3",
+   "size": 14264838
+  },
+  "ai/transformers.min.js": {
+   "sha256": "8b5a3171f8876bab2b1820a7d65eb87628e3d30bb5ea85b9dd398e76eb34decb",
+   "size": 587917
+  },
+  "css/styles.css": {
+   "sha256": "ecf5f4965c74c755af88c3028739f5b4b8c4621982c91ead70bcdca5d246e384",
+   "size": 30816
+  },
+  "data/medlineplus-version.json": {
+   "sha256": "c65422d1a67bdeb7398c1d2c636d107b29983a310c63ff2b0217ebdd37e49062",
+   "size": 83
+  },
+  "data/medlineplus.json": {
+   "sha256": "79a5f4e3eb07f6db5e0b33c03242b21afde31ef9595ed3ac171dca5019ff4ff7",
+   "size": 2225658
+  },
+  "icons/icon-192.png": {
+   "sha256": "54a990e074aa7fc9cd34925faf758be7d9c06ba717786391c5511d82a7704b96",
+   "size": 981
+  },
+  "icons/icon-512.png": {
+   "sha256": "1e95571241a9e578211f22cbeff1ee0680830c4e014513bca9bec771ca7a5d44",
+   "size": 3217
+  },
+  "index.html": {
+   "sha256": "a59d5cc481ed42f8c1dd371479b57c9ffb77d12f014d06df9c1e75a1ddc23cce",
+   "size": 2259
+  },
+  "js/ai-worker.js": {
+   "sha256": "3b431261edf7403d4c86513ec2b9505a0cf3fa3c16027a9430f370b1bdeca8bd",
+   "size": 1785
+  },
+  "js/app.js": {
+   "sha256": "80f44484bb28ddc28408d3217e9d1f2c49fe4b21a8418b66de9c0cf344489d4c",
+   "size": 19889
+  },
+  "js/core/planner.js": {
+   "sha256": "ec5766f550f12c220cdcf7236d20196de7201583d438fc67777557c9278190d5",
+   "size": 10631
+  },
+  "js/core/store.js": {
+   "sha256": "84a4e065df7f80abcdaea651ab9bcd90350259ee542b5d7e5e57a36eb888c2a2",
+   "size": 4320
+  },
+  "js/core/time.js": {
+   "sha256": "b8385a317188ab3e33321972940cbf86373bb11dd40573816f5e65f1409ca302",
+   "size": 4170
+  },
+  "js/data/abbreviations.js": {
+   "sha256": "22e883db5e6955aa01141bdea18a7fbd4061c9d06fdec36c242693d7e8e8a426",
+   "size": 3356
+  },
+  "js/data/curriculum.js": {
+   "sha256": "faad2a22a804e5e9b3bf2f7a383c7df2aa0b3198afbda5a94782b7aa51e468d3",
+   "size": 85884
+  },
+  "js/data/exam.js": {
+   "sha256": "f55727ea10e00a9fa78416cb28e992c035e05f2d926c479acb804da8fdf813f3",
+   "size": 7096
+  },
+  "js/data/fed-reference.js": {
+   "sha256": "d56b77de2db0b19f500d6671a101ed237ccb48cf0508f60a563065fdcc0aa343",
+   "size": 172181
+  },
+  "js/data/gov-library.js": {
+   "sha256": "da53092241f50659eea9954a1d468798587653d52e3c522f6025737256292ef7",
+   "size": 382013
+  },
+  "js/data/helpbot-kb.js": {
+   "sha256": "8120567098015363a22a5b3f3f42e030248a8d066c39f1631c2dbdcfc699d625",
+   "size": 18074
+  },
+  "js/data/medlineplus-version.js": {
+   "sha256": "d89fbd3ba5f73a4b1c63a6268bf09df8d0d8868e84207bab8fc9c9a99886452f",
+   "size": 316
+  },
+  "js/data/medlineplus.js": {
+   "sha256": "509d5a40ec47dc8ef2cf4f60bbea1be043eb693083b7df20a4ad5a12a6e4e73b",
+   "size": 2226167
+  },
+  "js/data/ok-course-standards.js": {
+   "sha256": "427000990fd8b83fe8ad289c72ea1112fb057d20317a4f36ae378330b21155c2",
+   "size": 249211
+  },
+  "js/data/questions.js": {
+   "sha256": "5ed9bb9546fb864780163f886f7c92c4d64f6ceb6f10448dab1061d7d1a0d1a1",
+   "size": 165264
+  },
+  "js/data/skills.js": {
+   "sha256": "8e1b81624372cca17ea3f792747ba3afe4092221f09293d4ba46556004fb7d1a",
+   "size": 50159
+  },
+  "js/data/sources.js": {
+   "sha256": "f783544135e2a4336b6f0bcb168bc54ab572e523d86b051cd03bc8350d978972",
+   "size": 29916
+  },
+  "js/data/states.js": {
+   "sha256": "fa22eddd9b1c9fc5265f136a6b3cba49639025cc7fd9bfdaaf5f70d51cf89f1e",
+   "size": 13587
+  },
+  "js/helpbot-engine.js": {
+   "sha256": "59d873a745a1c3ae67af7ce179f267acec8ea858aee5a81668c697f80418e33a",
+   "size": 11289
+  },
+  "js/helpbot-fda.js": {
+   "sha256": "c1953a75d9c3efa6f1df3c18bb831f9df3ed6994a4d641cf3428e053ed31fb42",
+   "size": 6426
+  },
+  "js/helpbot-online.js": {
+   "sha256": "613d1f0dfc5488a81a97511530343fe53f20a6b5bd94267eceafeeb7f10b645f",
+   "size": 19887
+  },
+  "js/helpbot.js": {
+   "sha256": "a6627d087a282d913fc99f5ea06d39f3748c7f8f8db11613839569c955c0fc8b",
+   "size": 57597
+  },
+  "js/medline-update.js": {
+   "sha256": "0bb063652cec66dc9be45b7773038fffb9649f6eabe39f7afc234fbc8dcd830c",
+   "size": 9587
+  },
+  "js/tour.js": {
+   "sha256": "9c332fdc64315b4a29d3816bb72e2187b9ddbbed3c38448cedd40b17c96f4c2e",
+   "size": 28540
+  },
+  "js/updater.js": {
+   "sha256": "09e860816b38816ebce1ba1830a3bf98a2c3f96c460199f670732b01daeadf2c",
+   "size": 10884
+  },
+  "js/views/calendar.js": {
+   "sha256": "e701dbd685e4d3ca70924540c060ac6182059f585dfa1b9d3284cc7717cda981",
+   "size": 11142
+  },
+  "js/views/home.js": {
+   "sha256": "c8aad9dfbcc95c91bfc3c88a9b4543d5c7f9073e96d8f0bbe1c1f543bf1c18ba",
+   "size": 10101
+  },
+  "js/views/learn.js": {
+   "sha256": "35ae51635308e723666ca689c98daf1e3b5216192244cbd1c25e2cbba4002780",
+   "size": 10366
+  },
+  "js/views/more.js": {
+   "sha256": "52da159dedf2abeb91d55357b73ed437a928698527bcfebd0796cb6ddc590f1f",
+   "size": 33523
+  },
+  "js/views/tests.js": {
+   "sha256": "7ff6cf05e4680ff885de0dd515f247b12e82b1bfdc9e408ef778a6fed0ae9253",
+   "size": 21669
+  },
+  "manifest.webmanifest": {
+   "sha256": "d0d0d47b7b19149283f29ea649b297db8bcab1bc95904d1a8e2cce8f4c839376",
+   "size": 643
+  },
+  "sw.js": {
+   "sha256": "0bf2de7d790b000d802894ae3efe718b274f09fbac640644693656d30e9342ba",
+   "size": 2826
+  }
+ }
+}

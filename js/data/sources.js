@@ -1,0 +1,230 @@
+/* Official sources behind every lesson, unit and skill.
+ * RULE (user's standing order): only official sources — U.S. federal agencies (eCFR/CMS, CDC, NIH, HHS,
+ * OSHA, FEMA, SAMHSA) and state agencies. No commercial, school, blog or test-prep sites.
+ * Each link below was opened and confirmed live on VERIFIED. When you add or change a link, open it,
+ * confirm it supports the lesson, and update VERIFIED. `npm test` fails if a lesson/skill has no source
+ * or a link is not on an official domain. */
+(function (root) {
+  'use strict';
+  const VERIFIED = '2026-11-22';
+  const E = 'https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/';
+
+  const S = {
+    cfr152: { title: '42 CFR § 483.152 — Nurse aide training program requirements', by: 'eCFR (U.S. federal regulation)', url: E + 'subpart-D/section-483.152' },
+    cfr154: { title: '42 CFR § 483.154 — Nurse aide competency evaluation', by: 'eCFR (U.S. federal regulation)', url: E + 'subpart-D/section-483.154' },
+    cfr10: { title: '42 CFR § 483.10 — Resident rights', by: 'eCFR (U.S. federal regulation)', url: E + 'subpart-B/section-483.10' },
+    cfr12: { title: '42 CFR § 483.12 — Freedom from abuse, neglect, and exploitation', by: 'eCFR (U.S. federal regulation)', url: E + 'subpart-B/section-483.12' },
+    cdcHands: { title: 'About Handwashing', by: 'CDC', url: 'https://www.cdc.gov/clean-hands/about/index.html' },
+    cdcHandsHcp: { title: 'Hand Hygiene for Healthcare Workers', by: 'CDC', url: 'https://www.cdc.gov/clean-hands/hcp/clinical-safety/index.html' },
+    cdcStandard: { title: 'Standard Precautions for All Patient Care', by: 'CDC', url: 'https://www.cdc.gov/infection-control/hcp/basics/standard-precautions.html' },
+    cdcTransmission: { title: 'Transmission-Based Precautions', by: 'CDC', url: 'https://www.cdc.gov/infection-control/hcp/basics/transmission-based-precautions.html' },
+    cdcCdiff: { title: 'C. diff: Facts for Clinicians', by: 'CDC', url: 'https://www.cdc.gov/c-diff/hcp/clinical-overview/index.html' },
+    cdcCauti: { title: 'Catheter-Associated Urinary Tract Infection (CAUTI) Prevention Guideline', by: 'CDC', url: 'https://www.cdc.gov/infection-control/hcp/cauti/index.html' },
+    cdcStroke: { title: 'Signs and Symptoms of Stroke', by: 'CDC', url: 'https://www.cdc.gov/stroke/signs-symptoms/index.html' },
+    cdcSeizure: { title: 'First Aid for Seizures', by: 'CDC', url: 'https://www.cdc.gov/epilepsy/first-aid-for-seizures/index.html' },
+    fema: { title: 'Home Fire Prevention', by: 'U.S. Fire Administration (FEMA)', url: 'https://www.usfa.fema.gov/prevention/home-fires/' },
+    osha: { title: 'Safe Patient Handling', by: 'OSHA (U.S. Dept. of Labor)', url: 'https://www.osha.gov/healthcare/safe-patient-handling' },
+    oshaBBP: { title: 'Bloodborne Pathogens standard, 29 CFR 1910.1030 (needles must not be bent, recapped or removed)', by: 'OSHA (U.S. Dept. of Labor)', url: 'https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.1030' },
+    mlFalls: { title: 'Falls', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/falls.html' },
+    mlChoking: { title: 'Choking — adult or child over 1 year', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/000049.htm' },
+    mlBreathing: { title: 'Breathing difficulties — first aid', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/000007.htm' },
+    mlPressure: { title: 'Pressure Sores', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/pressuresores.html' },
+    mlVitals: { title: 'Vital signs', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/002341.htm' },
+    mlBP: { title: 'Blood pressure measurement', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/007490.htm' },
+    nhlbiBP: { title: 'High Blood Pressure — What is it?', by: 'NHLBI (NIH)', url: 'https://www.nhlbi.nih.gov/health/high-blood-pressure' },
+    mlSwallow: { title: 'Swallowing Disorders', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/swallowingdisorders.html' },
+    mlDehydration: { title: 'Dehydration', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/dehydration.html' },
+    nidcdHearing: { title: 'Age-Related Hearing Loss (Presbycusis)', by: 'NIDCD (NIH)', url: 'https://www.nidcd.nih.gov/health/age-related-hearing-loss' },
+    neiPresbyopia: { title: 'Presbyopia', by: 'National Eye Institute (NIH)', url: 'https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/presbyopia' },
+    niaDementia: { title: "Alzheimer's and Dementia", by: 'National Institute on Aging (NIH)', url: 'https://www.nia.nih.gov/health/alzheimers-and-dementia' },
+    niaEndLife: { title: 'End of Life', by: 'National Institute on Aging (NIH)', url: 'https://www.nia.nih.gov/health/end-life' },
+    samhsa988: { title: '988 Suicide & Crisis Lifeline', by: 'SAMHSA (HHS)', url: 'https://www.samhsa.gov/mental-health/988' },
+    hipaa: { title: 'HIPAA Privacy Rule (45 CFR Part 164, Subpart E)', by: 'eCFR — U.S. Code of Federal Regulations', url: 'https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E' },
+    // --- Official nurse aide training documents (state governments) ---
+    okCore: { title: 'Course Standards to Teach the Oklahoma Long Term Care Nurse Aide Training Program (2008)', by: 'Oklahoma State Department of Health', url: 'https://oklahoma.gov/content/dam/ok/en/health/health2/documents/natcep-ok-core-curriculum-072508.pdf' },
+    okSG: { title: 'Certified Nurse Aide Study Guide (revised 2017; exam outline, skills list, sample questions)', by: 'Oklahoma CareerTech Testing Center', url: 'https://oklahoma.gov/content/dam/ok/en/careertech/testing-centers/testing/study-guides/certified-nurse-aide-sg.pdf' },
+    okRules: { title: 'Oklahoma Administrative Code 310:677 — Nurse Aide Training and Certification', by: 'Oklahoma State Department of Health', url: 'https://oklahoma.gov/content/dam/ok/en/health/health2/aem-documents/protective-health/long-term-care-services/forms/current/rules-and-regs/Chapter%20677%2009.2023.pdf' },
+    arCur: { title: 'Long Term Care Facility Nursing Assistant Training Curriculum (revised January 2019)', by: 'Arkansas Department of Human Services', url: 'https://humanservices.arkansas.gov/wp-content/uploads/Curriculum_for_Nursing_Assistant_Training_Programs_2019-01_1.pdf' },
+    okCur: { title: 'Long Term Care Aide Curriculum (2023)', by: 'Oklahoma State Department of Health', url: 'https://oklahoma.gov/content/dam/ok/en/health/health2/aem-documents/protective-health/long-term-care-services/forms/current/nurse-aide-training-program-resources/ltc/hrds-nar-ltc-curriculum%20-2023.pdf' },
+    osdhPPE: { title: 'Donning and Doffing Personal Protective Equipment (Dec 2024)', by: 'Oklahoma State Department of Health', url: 'https://oklahoma.gov/content/dam/ok/en/health/health2/aem-documents/prevention-and-preparedness/infectious-disease-prevention-and-response/Donning_Doffing%20PPE_12.2024.pdf' },
+    odmhsasSigns: { title: 'Suicide warning signs (Service Members, Veterans and their Families)', by: 'Oklahoma Department of Mental Health and Substance Abuse Services', url: 'https://oklahoma.gov/odmhsas/prevention/communities/smvf.html' },
+    odmhsasGrief: { title: 'Loss and Grief Debriefing Handout', by: 'Oklahoma Department of Mental Health and Substance Abuse Services', url: 'https://oklahoma.gov/content/dam/ok/en/odmhsas/documents/about/eap/resources/EAP--Grief-Debriefing-Handout.pdf' },
+    cfr488: { title: '42 CFR 488.308 — Survey frequency (nursing homes)', by: 'eCFR (CMS)', url: 'https://www.ecfr.gov/current/title-42/section-488.308' },
+    cmsBrief: { title: 'Brief Summaries of Medicare & Medicaid (2023)', by: 'Centers for Medicare & Medicaid Services', url: 'https://www.cms.gov/files/document/brief-summaries-medicare-medicaid-november-1-2023.pdf' },
+    mlSkinCond: { title: 'Skin Conditions', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/skinconditions.html' },
+    mlAnkle: { title: 'Ankle Injuries and Disorders', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ankleinjuriesanddisorders.html' },
+    mlUrine: { title: 'Urine and Urination', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/urineandurination.html' },
+    mlEmphysema: { title: 'Emphysema', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/emphysema.html' },
+    mlHighBP: { title: 'High Blood Pressure', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/highbloodpressure.html' },
+    mlCell: { title: 'What is a cell?', by: 'MedlinePlus Genetics (NIH)', url: 'https://medlineplus.gov/genetics/understanding/basics/cell/' },
+    niaBathing: { title: 'Alzheimer\'s Caregiving: Bathing, Dressing, and Grooming', by: 'National Institute on Aging (NIH)', url: 'https://www.nia.nih.gov/health/alzheimers-caregiving/alzheimers-caregiving-bathing-dressing-and-grooming' },
+    okFeed: { title: 'State-approved Curriculum for Feeding Assistant (2024)', by: 'Oklahoma State Department of Health', url: 'https://oklahoma.gov/content/dam/ok/en/health/health2/aem-documents/protective-health/long-term-care-services/forms/current/feeding-assistants/Oklahoma%20State%20Approved%20Feeding%20Curriculum%20Manual.pdf' },
+    vaCur: { title: 'Nurse Aide Curriculum (revised Dec 2023)', by: 'Virginia Board of Nursing', url: 'https://www.dhp.virginia.gov/media/dhpweb/docs/nursing/forms/education/NA_BoardApprovedCurriculum.pdf' },
+    vaVS: { title: 'Vital Signs training (2024)', by: 'Virginia Dept. of Behavioral Health & Developmental Services', url: 'https://dbhds.virginia.gov/wp-content/uploads/2024/02/Vital-Signs-with-Quiz-February-2024.pdf' },
+    ncAA: { title: 'State-approved Nurse Aide I Curriculum — Module AA: Measurement (2024)', by: 'North Carolina DHHS', url: 'https://info.ncdhhs.gov/dhsr/hcpr/curriculum/pdf/2024/2_0_Teaching_Guide/Module_AA_Measurement_Teaching_Guide_2.0_cf.pdf' },
+    ncHB: { title: 'Nurse Aide I Candidate Handbook (skills checklists)', by: 'North Carolina DHHS Nurse Aide Registry', url: 'https://ncnar.ncdhhs.gov/pdf/NC-NurseAide-I-Handbook.pdf' },
+    dcHB: { title: 'Nurse Aide Candidate Handbook (skills checklists)', by: 'DC Health', url: 'https://doh.dc.gov/sites/default/files/dc/sites/doh/publication/attachments/Nursing_DC_Nurse_Aide_Candidate_Handbook.pdf' },
+    inCur: { title: 'Nurse Aide Curriculum (with step-by-step procedures)', by: 'Indiana Department of Health', url: 'https://www.in.gov/health/files/Indiana_Nurse_Aide_Curriculum.pdf' },
+    waCK: { title: 'Skills Practice Procedure Checklist (DSHS 16-245)', by: 'Washington State DSHS', url: 'https://www.dshs.wa.gov/sites/default/files/forms/pdf/16-245.pdf' },
+    // --- More federal health pages ---
+    mlPulse: { title: 'Pulse', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/003399.htm' },
+    mlResp: { title: 'Rapid shallow breathing (normal adult rate)', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/007198.htm' },
+    mlTemp: { title: 'Body temperature norms', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/001982.htm' },
+    mlUTI: { title: 'Urinary tract infection — adults', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/000521.htm' },
+    mlDelirium: { title: 'Delirium', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/000740.htm' },
+    mlDementia: { title: 'Dementia', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/dementia.html' },
+    mlSeiz: { title: 'Seizures', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/article/003200.htm' },
+    mlCath: { title: 'Indwelling catheter care', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/patientinstructions/000140.htm' },
+    mlPressPrev: { title: 'Preventing pressure injuries', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/patientinstructions/000147.htm' },
+    mlOxygen: { title: 'Using oxygen at home (fire safety)', by: 'MedlinePlus (NIH)', url: 'https://medlineplus.gov/ency/patientinstructions/000048.htm' },
+    niaWhat: { title: 'What Is Dementia? Symptoms, Types, and Diagnosis', by: 'National Institute on Aging (NIH)', url: 'https://www.nia.nih.gov/health/alzheimers-and-dementia/what-dementia-symptoms-types-and-diagnosis' },
+    niaEndCare: { title: 'Providing Care and Comfort at the End of Life', by: 'National Institute on Aging (NIH)', url: 'https://www.nia.nih.gov/health/end-life/providing-care-and-comfort-end-life' },
+    cdcCautiRec: { title: 'CAUTI Guideline — Summary of Recommendations', by: 'CDC', url: 'https://www.cdc.gov/infection-control/hcp/cauti/summary-of-recommendations.html' },
+    okCSO: { title: 'Clinical Skills Observer Manual (critical tasks, vital-sign margins)', by: 'Oklahoma CareerTech Testing Center', url: 'https://oklahoma.gov/content/dam/ok/en/careertech/testing-centers/testing/hcp-coordinator-resources/cso-manual.pdf' },
+    okTSCM: { title: 'HCP Test Site Coordinator Manual (with OSDH)', by: 'Oklahoma CareerTech Testing Center', url: 'https://oklahoma.gov/content/dam/ok/en/careertech/testing-centers/testing/hcp-coordinator-resources/test-site-coord-manual.pdf' },
+    okBadge: { title: 'Badge Details: 8607 – Long Term Care Nurse Aide', by: 'Oklahoma CareerTech', url: 'https://oklahoma.gov/content/dam/ok/en/careertech/educators/certifications-and-badging/8607-long-term-care-nurse-aide.pdf' },
+    okNAPage: { title: 'Nurse Aide certification exams (required documents)', by: 'Oklahoma CareerTech Testing Center', url: 'https://oklahoma.gov/careertech/testing-center/health-professional-certifications/nurse-aide.html' },
+    cdcLaundry: { title: 'Laundry and Bedding (environmental infection control)', by: 'CDC', url: 'https://www.cdc.gov/infection-control/hcp/environmental-control/laundry-bedding.html' },
+    cdcIsoWaste: { title: 'Isolation Precautions — preventing transmission (solid waste)', by: 'CDC', url: 'https://www.cdc.gov/infection-control/hcp/isolation-precautions/prevention.html' },
+    fda1019: { title: '21 CFR § 101.9 — "1 fl oz means 30 mL"', by: 'eCFR (FDA regulation)', url: 'https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-A/section-101.9' },
+  };
+
+  /* KEY POINT CROSS-CHECKS (user's rules: OKLAHOMA ONLY, every fact confirmed by 3 different official sources,
+   * at least one of them an official Oklahoma document — okCore, okSG, okRules, okCur).
+   * keyPoints[lessonId][i] matches curriculum keyPoints[i]. Each source listed here was opened and the
+   * matching statement read on VERIFIED. `partial` = fewer than 3 found yet (shown as such in the app).
+   * `note` = official sources say slightly different things. `tip` = a study tip, not a factual claim. */
+  const keyPoints = {
+    'role-1': [{ s: ['cfr152', 'okSG', 'inCur', 'vaCur'] }, { s: ['cfr152', 'okSG', 'inCur', 'okCore'] }, { s: ['okCore', 'inCur', 'okSG'] }, { s: ['okCore', 'cfr488', 'cmsBrief'], note: 'Oklahoma course standards (pp. 116–117): facilities are licensed by OSDH; the Standard Survey is done on an annual basis. Federal rule 42 CFR 488.308: a standard survey no later than 15 months after the last one, statewide average 12 months or less.' }],
+    'role-2': [{ s: ['okSG', 'vaCur', 'cfr152'] }, { s: ['okSG', 'inCur', 'okCore'] }, { s: ['hipaa', 'cfr10', 'okSG'] }],
+    'anatomy-1': [{ s: ['okCore', 'inCur', 'mlSkinCond'], note: 'Oklahoma course standards (p. 37): skin "is the first line of defense against infection". Indiana curriculum (p. 87): skin function includes "Bacterial protection". MedlinePlus: skin "Keeps out harmful germs".' }, { s: ['okCore', 'inCur', 'mlAnkle'] }, { s: ['okCore', 'inCur', 'mlUrine'] }, { s: ['okCore', 'inCur', 'mlEmphysema'] }, { s: ['okCore', 'inCur', 'mlHighBP'] }],
+    'role-3': [{ s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'vaCur', 'nidcdHearing', 'neiPresbyopia'] }, { s: ['okCore', 'inCur', 'vaCur'] }],
+    'rights-1': [{ s: ['cfr10', 'okSG', 'okCore', 'vaCur'] }, { s: ['cfr10', 'okCore', 'vaCur', 'inCur'] }, { s: ['cfr10', 'okCur', 'okCore', 'inCur', 'vaCur'] }],
+    'rights-2': [{ s: ['inCur', 'waCK', 'okCore'] }, { s: ['okCore', 'vaCur', 'okRules', 'okSG'] }, { s: ['okSG', 'okRules', 'cfr12'] }],
+    'infection-1': [{ s: ['cdcHands', 'okCore', 'inCur'] }, { s: ['okCore', 'mlUTI', 'mlDelirium', 'vaCur'] }],
+    'infection-2': [{ s: ['okCore', 'cdcStandard', 'vaCur', 'inCur'] }, { s: ['cdcCdiff', 'cdcHands', 'inCur', 'okFeed'], partial: 'C. diff and hand sanitizer: CDC, plus Indiana. No Oklahoma document mentions C. diff. The soap-and-water-after-blood-or-body-fluids part is from Oklahoma (OSDH feeding assistant curriculum, p. 38).' }, { s: ['okCore', 'cdcHands', 'inCur', 'waCK'], note: 'Oklahoma course standards: at least 10 seconds. DC handbook: 15. CDC, Indiana and Washington: 20. Scrubbing 20 seconds meets every source.' }],
+    'infection-3': [{ s: ['osdhPPE', 'inCur', 'ncHB'], note: 'Oklahoma State Department of Health PPE guide (p. 11): the sequence for taking off PPE starts with "1. Gloves". Always follow the PPE removal order posted at your facility.' }, { s: ['okCore', 'vaCur', 'ncHB'] }, { s: ['okCore', 'inCur', 'vaCur'] }],
+    'safety-1': [{ s: ['okCore', 'vaCur', 'ncHB', 'inCur'] }, { s: ['okCore', 'vaCur', 'inCur'] }],
+    'safety-2': [{ s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'inCur', 'mlOxygen'] }, { s: ['cdcSeizure', 'mlSeiz', 'okCore'] }],
+    'safety-3': [{ s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'vaCur', 'osha'] }],
+    'communication-1': [{ s: ['ncHB', 'dcHB', 'inCur', 'okSG'] }, { s: ['ncHB', 'dcHB', 'okCore'] }],
+    'communication-2': [{ s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'okSG', 'inCur'] }],
+    'personal-care-1': [{ s: ['okCore', 'ncHB', 'dcHB', 'vaCur'] }, { s: ['okCore', 'mlPressure', 'inCur'] }, { s: ['vaCur', 'okCore', 'mlPressPrev'] }, { s: ['okCore', 'inCur', 'niaBathing'], note: 'Oklahoma course standards (p. 78): "Pat resident\'s skin dry instead of rubbing and use lotion on dry areas of skin." Indiana (p. 205): "Patting dry prevents skin tears"; "Apply lotion to skin". NIA: "Pat the person\'s skin dry with a towel."' }, { s: ['okCore', 'inCur', 'vaCur'], note: 'Oklahoma (p. 79): "Give backrubs to increase comfort and circulation." Indiana back rub procedure (p. 209): increases comfort; "Circular strokes increase circulation". Virginia (p. 180): back rub "relaxes tired, tense muscles", "improves circulation".' }, { s: ['okCore', 'vaCur', 'inCur'], note: 'Oklahoma (p. 78): skin becomes "thinner, less elastic and easier to damage. The skin can tear and bruise more easily." Virginia (p. 23): "skin becomes thinner and tears more easily". Indiana (p. 87): skin "becomes more fragile".' }],
+    'personal-care-2': [{ s: ['okCore', 'waCK', 'inCur'], note: 'For rinsing, NC\'s skills checklist says moderate-temperature water and Indiana says warm. All agree: never hot water, store in cool water or solution.' }, { s: ['vaCur', 'okCore', 'ncHB', 'dcHB'] }, { s: ['vaCur', 'okCore', 'inCur'] }],
+    'personal-care-3': [{ s: ['okCore', 'ncHB', 'dcHB', 'mlCath'] }, { s: ['cdcCautiRec', 'okCore', 'waCK'] }, { s: ['okCore', 'mlCath', 'inCur'] }],
+    'vitals-1': [{ s: ['okCore', 'mlPulse', 'mlVitals', 'ncAA'] }, { s: ['okCore', 'vaCur', 'mlResp'], note: 'Oklahoma course standards, Virginia and MedlinePlus say 12–20. MedlinePlus\'s vital-signs page says 12–18 and Virginia DBHDS says 12–16. Follow your facility\'s range and report anything outside it.' }, { s: ['okCore', 'ncHB', 'dcHB', 'mlPulse'] }, { s: ['okCore', 'ncHB', 'ncAA', 'mlPulse'] }],
+    'vitals-2': [{ s: ['okCore', 'ncAA', 'vaCur', 'vaVS'], note: 'Oklahoma\'s procedure says to use the unaffected arm; North Carolina and Virginia list which arms to avoid.' }, { s: ['okCore', 'inCur', 'arCur'] }, { s: ['ncAA', 'okSG', 'okCore'] }],
+    'nutrition-1': [{ s: ['okCore', 'ncHB', 'dcHB', 'vaCur'], note: 'Oklahoma says a comfortable sitting position; NC\'s checklist says 75–90 degrees and DC\'s says 45–90 degrees. Follow the care plan.' }, { s: ['okSG', 'inCur', 'vaCur'] }, { s: ['okCore', 'okFeed', 'vaCur', 'inCur'] }],
+    'nutrition-2': [{ s: ['okCore', 'fda1019', 'vaCur', 'ncAA'] }, { s: ['okCore', 'vaCur', 'ncAA'] }, { s: ['ncHB', 'dcHB', 'vaCur'], partial: 'Three official sources agree, but the official Oklahoma procedure only says to measure and record accurately — it does not mention eye level.' }],
+    'mobility-1': [{ s: ['okCore', 'mlPressure', 'inCur'] }, { s: ['okCore', 'inCur', 'waCK'] }],
+    'mobility-2': [{ s: ['okCore', 'ncHB', 'dcHB', 'waCK'] }, { s: ['okCore', 'inCur', 'arCur'] }, { s: ['okCore', 'waCK', 'inCur'] }],
+    'dementia-1': [{ s: ['okCore', 'mlDementia', 'niaWhat', 'inCur'] }, { s: ['okCore', 'mlDelirium', 'inCur'] }],
+    'dementia-2': [{ s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'inCur', 'vaCur'] }],
+    'dementia-5': [{ s: ['okCore', 'vaCur', 'inCur', 'mlDementia'] }, { s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'vaCur', 'inCur', 'mlDementia'] }],
+    'dementia-6': [{ s: ['okCore', 'okSG', 'vaCur'] }, { s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'vaCur', 'inCur'] }],
+    'dementia-3': [{ s: ['odmhsasSigns', 'inCur', 'vaCur', 'samhsa988'], note: 'Oklahoma\'s Department of Mental Health lists "Talking about wanting to die or to kill themselves" as a warning sign and says to seek help. For a nurse aide, getting help means telling the nurse right away (Indiana and Virginia curricula).' }, { s: ['niaEndCare', 'okCore', 'inCur'] }, { s: ['okCore', 'odmhsasGrief', 'vaCur'], note: 'Oklahoma course standards (p. 113): five stages of grief; each person may experience the stages at a different rate or time. Oklahoma ODMHSAS: do not put a timeline on grief; grief does not always go in stages. Virginia: not everyone passes through all the stages.' }],
+    'documentation-1': [{ s: ['okCore', 'inCur', 'vaVS'] }, { s: ['okCore', 'vaCur', 'inCur'] }],
+    'documentation-2': [{ s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'inCur', 'arCur'] }],
+    'rights-3': [{ s: ['okCore', 'vaCur', 'inCur'] }, { s: ['okCore', 'inCur', 'okSG'] }, { s: ['okCore', 'cfr10', 'okCur', 'vaCur'] }],
+    'safety-4': [{ s: ['okCore', 'vaCur', 'cfr10'] }, { s: ['okCore', 'vaCur', 'inCur'] }, { s: ['vaCur', 'cfr12', 'okCur'] }],
+    'personal-care-4': [{ s: ['okCore', 'vaCur', 'inCur'] }, { s: ['inCur', 'vaCur'], partial: 'Indiana and Virginia curricula agree; no official Oklahoma document found yet with these exact times.' }, { s: ['okCore', 'vaCur', 'inCur'] }],
+    'dementia-4': [{ s: ['okCore', 'inCur', 'arCur'] }, { s: ['okCore', 'inCur', 'vaCur'] }, { s: ['vaCur', 'okCore', 'inCur'] }],
+    'infection-4': [{ s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'inCur', 'cdcHandsHcp'] }, { s: ['okSG', 'okCore', 'cdcLaundry', 'cdcIsoWaste'], note: 'Oklahoma\'s official skills list includes "Double-bag for isolation precautions," and Oklahoma\'s course standards (p. 16) direct following posted isolation signs. CDC says single bags of sufficient tensile strength / one bag are adequate — learn the Oklahoma skill for the test and follow facility policy at work.' }],
+    'personal-care-5': [{ s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'inCur', 'vaCur'] }, { s: ['okCore', 'inCur', 'vaCur'] }],
+    'personal-care-6': [{ s: ['okSG', 'okCSO', 'okTSCM', 'inCur', 'vaCur'] }, { s: ['inCur', 'vaCur'], partial: 'Indiana and Virginia official curricula agree. Oklahoma\'s study guide and both CareerTech testing manuals list this as a tested skill, but none of the Oklahoma documents (course standards, study guide, testing manuals, practice scenarios, rules) gives the steps — follow your Oklahoma instructor.' }, { s: ['inCur', 'vaCur'], partial: 'Indiana and Virginia official curricula agree. Oklahoma\'s study guide and both CareerTech testing manuals list this as a tested skill, but none of the Oklahoma documents (course standards, study guide, testing manuals, practice scenarios, rules) gives the steps — follow your Oklahoma instructor.' }],
+    'skills-1': [{ s: ['cfr154', 'okRules', 'okSG'] }, { s: ['okSG', 'ncHB', 'dcHB'] }, { s: ['okSG', 'ncHB', 'dcHB'] }],
+    'skills-2': [{ tip: true }, { tip: true }],
+    'skills-3': [{ s: ['okSG', 'okCSO', 'okTSCM'] }, { s: ['okSG', 'okBadge', 'okTSCM', 'okCSO'] }, { s: ['okCSO', 'okTSCM'], partial: 'These margins are Oklahoma\'s own scoring rule for its skills test, so other states\' documents do not have them. Both official Oklahoma CareerTech manuals that publish the rule (Clinical Skills Observer Manual and Test Site Coordinator Manual, both current on oklahoma.gov) agree word for word. No third official document states them; ask your test site if unsure.' }, { s: ['okSG', 'okTSCM', 'okNAPage'] }],
+
+  };
+
+  // Which official pages each lesson is based on (first = main source).
+  const lessons = {
+    'role-1': ['okCore', 'cfr152'],
+    'role-2': ['cfr152', 'hipaa'],
+    'anatomy-1': ['okCore', 'inCur', 'mlCell', 'mlSkinCond', 'mlUrine'],
+    'role-3': ['okCore', 'inCur', 'vaCur', 'nidcdHearing', 'neiPresbyopia'],
+    'rights-1': ['cfr10'],
+    'rights-2': ['cfr10', 'cfr12'],
+    'rights-3': ['okCore', 'okSG', 'cfr10'],
+    'infection-1': ['cdcStandard', 'cdcTransmission'],
+    'infection-2': ['cdcHands', 'cdcHandsHcp', 'cdcStandard', 'cdcCdiff'],
+    'infection-3': ['cdcTransmission', 'cdcStandard', 'oshaBBP'],
+    'infection-4': ['okCore', 'okSG', 'cdcStandard'],
+    'safety-1': ['mlFalls', 'cfr10'],
+    'safety-2': ['fema', 'mlChoking', 'cdcSeizure', 'cdcStroke', 'mlBreathing'],
+    'safety-3': ['osha'],
+    'safety-4': ['okCore', 'cfr10', 'cfr12', 'vaCur'],
+    'communication-1': ['cfr152', 'cfr10', 'vaCur'],
+    'communication-2': ['cfr10'],
+    'personal-care-1': ['mlPressure', 'cfr152'],
+    'personal-care-2': ['cfr152'],
+    'personal-care-3': ['cdcCauti', 'cfr152'],
+    'personal-care-4': ['okCore', 'okSG', 'vaCur', 'inCur'],
+    'personal-care-5': ['okCore', 'okSG', 'inCur', 'vaCur'],
+    'personal-care-6': ['okSG', 'inCur', 'vaCur'],
+    'vitals-1': ['mlVitals', 'cfr152'],
+    'vitals-2': ['nhlbiBP', 'mlBP', 'cfr152'],
+    'nutrition-1': ['mlSwallow', 'cfr152'],
+    'nutrition-2': ['mlDehydration'],
+    'mobility-1': ['cfr152', 'mlPressure', 'vaCur'],
+    'mobility-2': ['osha', 'cfr152', 'vaCur'],
+    'dementia-1': ['niaDementia', 'cfr152'],
+    'dementia-2': ['niaDementia', 'cfr152'],
+    'dementia-5': ['okCore', 'okSG', 'vaCur', 'inCur', 'mlDementia'],
+    'dementia-6': ['okSG', 'okCore', 'vaCur', 'inCur'],
+    'dementia-3': ['niaEndLife', 'samhsa988', 'cfr152'],
+    'dementia-4': ['okCore', 'okSG', 'inCur', 'vaCur'],
+    'documentation-1': ['cfr152'],
+    'documentation-2': ['hipaa'],
+    'skills-1': ['cfr154', 'cfr152'],
+    'skills-2': ['cfr154'],
+    'skills-3': ['okSG', 'okCSO', 'okTSCM', 'okNAPage'],
+  };
+
+  // Which official pages each skill guide is based on. Exact tested steps come from your state's
+  // official candidate handbook (see State Requirements), which is always the final word.
+  const skills = {
+    'handwashing': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cdcHands', 'cdcHandsHcp'],
+    'ppe': ['okCore', 'osdhPPE', 'okSG', 'okCSO', 'okTSCM', 'cdcStandard', 'cdcTransmission'],
+    'oral-temp': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'mlTemp', 'mlVitals'],
+    'radial-pulse': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'mlVitals', 'cfr152'],
+    'respirations': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'mlVitals', 'cfr152'],
+    'manual-bp': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'mlBP', 'nhlbiBP'],
+    'weight': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152'],
+    'urine-output': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152', 'ncHB', 'dcHB'],
+    'peri-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152', 'cdcStandard', 'inCur'],
+    'catheter-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cdcCauti'],
+    'mouth-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152'],
+    'denture-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152', 'ncHB', 'dcHB'],
+    'hair-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'niaBathing', 'cfr152'],
+    'nail-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'niaBathing', 'cfr152'],
+    'dressing': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152'],
+    'feeding': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152', 'mlSwallow'],
+    'prom': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152'],
+    'position-side': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152', 'mlPressure', 'ncHB', 'dcHB'],
+    'transfer': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'osha', 'cfr152'],
+    'ambulate': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'osha', 'mlFalls'],
+    'bedpan': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152', 'cdcStandard'],
+    'foot-care': ['okCore', 'okSG', 'okCSO', 'okTSCM', 'cfr152'],
+  };
+
+  const get = (ids) => (ids || []).map((id) => Object.assign({ id }, S[id]));
+  const api = {
+    VERIFIED, all: S, lessons, skills, keyPoints, get,
+    forKeyPoint: (lessonId, i) => { const k = (keyPoints[lessonId] || [])[i] || {}; return Object.assign({}, k, { list: get(k.s) }); },
+    forLesson: (id) => {
+      const ids = (lessons[id] || []).slice();
+      (keyPoints[id] || []).forEach((k) => (k.s || []).forEach((x) => { if (!ids.includes(x)) ids.push(x); }));
+      return get(ids);
+    },
+    forSkill: (id) => get(skills[id]),
+    forUnit: (unitId, allLessons) => {
+      const ids = [];
+      allLessons.filter((l) => l.unit === unitId).forEach((l) => api.forLesson(l.id).forEach((x) => { if (!ids.includes(x.id)) ids.push(x.id); }));
+      return get(ids);
+    },
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else { root.CNA = root.CNA || {}; root.CNA.sources = api; }
+})(typeof self !== 'undefined' ? self : this);
